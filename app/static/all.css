@@ -1,0 +1,70 @@
+body {
+	background-image: url(https://making-photos.b0.upaiyun.com/photos/a9096d008b5e9daec0d24681a7866d7d.jpg);
+	background-repeat: none;
+	background-attachment:  fixed;
+
+}
+.container {
+	width: 80%;
+	text-align: center;
+	margin: 3em auto;
+
+}
+#upSay {
+	width: 70%;
+	margin: 1em auto;
+	text-align: center;
+}
+.row {
+	margin: 0 auto;
+	-webkit-flex: 1 0 10%;
+	flex: 1 0 10%;
+}
+#indexShow {
+	display: -webkit-flex;
+  	display: flex;
+	text-align: left;
+	background-color: white;
+	margin: 3em 3em;
+	border-radius: 0.5em;
+	cursor: default;
+}
+.inlineTest {
+	display: inline;
+	float: left;
+}
+#indexImage {
+	width: 200px;
+	height: 300px;
+	border: 1px solid gray;
+	
+}
+#indexProfile {
+	margin: 1em;
+	width: 70%;
+}
+#indexProfile a {
+	text-decoration: none;
+}
+.name {
+	font-size: 1.5em;
+	color: #47b2e2;
+}
+#page {
+}
+.toDouban {
+	margin-top: 2.5em;
+}
+#indexDown {
+	float: right;
+	right: 2em;
+	top: 1em;
+	color: #47b2e2;
+}
+.voteCount {
+	font-size: 1.5em;
+	color: rgb(100, 74, 10);
+}
+.goup-container {
+	background-color: white;
+}

@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='container'>
+	<div class='row'>
+
+
+    {% if no == 0 %}
+<div id='upSay' class="alert alert-warning alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>版权声明</strong>, 本站资源（包括但不限于BT资源/图像）均来自于互联网，本站旨在分享互联网优质资源，版权归电影制片方所有。
+</div>
+{% endif %}
+<nav id='page'>
+  <ul class="pagination">
+    
+    <li class='0'><a href="/0">1-25</a></li>
+    <li class='25'><a href="/25">26-50</a></li>
+    <li class='50'><a href="/50">51-75</a></li>
+    <li class='75'><a href="/75">76-100</a></li>
+    <li class='100'><a href="/100">101-125</a></li>
+    <li class='125'><a href="/125">126-150</a></li>
+    <li class='150'><a href="/150">151-175</a></li>
+    <li class='175'><a href="/175">176-200</a></li>
+    <li class='200'><a href="/200">201-225</a></li>
+    <li class='225'><a href="/225">226-250</a></li>
+
+  </ul>
+
+</nav>
+
+{% for i in entries %}
+<div id = 'indexShow'>
+
+<img src="http://ghostblogforvivian.qiniudn.com/{{i['images']}}" alt='{{i['name']}}' class='img-rounded inlineTest' id='indexImage'>
+<div id='indexProfile' class='inlineTest'>
+	<h4 class='name' id='{{i['id']}}'>{{i['name']}}</h4>
+  <span id='indexDown' class="glyphicon glyphicon-save-file" aria-hidden="true"><b><a href="http://jas0n.me/douban_top_250/[{{i['id']}}]{{i['name']}}.torrent"><b>下载种子</a></b></span>
+	<span><span class="glyphicon glyphicon-star" aria-hidden="true">排名:<b>{{i['id']}}</b></span><br><span class="glyphicon glyphicon-ok" aria-hidden="true">评分:<span class='voteCount'>{{i['rating']}}</span></span></span>
+	<span><p class='toDouban'>{% if i['submary'] != None%}{{i['submary'][:200]}}{% else %}none{% endif %}<a href="{{i['doubanurl']}}">...转到豆瓣>></a></p></span>
+
+</div>
+</div>
+{% endfor %}
+
+</div>
+<nav id='page'>
+  <ul class="pagination">
+    
+    <li class='0'><a href="/0">1-25</a></li>
+    <li class='25'><a href="/25">26-50</a></li>
+    <li class='50'><a href="/50">51-75</a></li>
+    <li class='75'><a href="/75">76-100</a></li>
+    <li class='100'><a href="/100">101-125</a></li>
+    <li class='125'><a href="/125">126-150</a></li>
+    <li class='150'><a href="/150">151-175</a></li>
+    <li class='175'><a href="/175">176-200</a></li>
+    <li class='200'><a href="/200">201-225</a></li>
+    <li class='225'><a href="/225">226-250</a></li>
+
+  </ul>
+
+</nav>
+
+</div>
+      <script type="text/javascript">
+    $('.{{no}}').addClass('active');
+  
+</script>
+{% endblock %}

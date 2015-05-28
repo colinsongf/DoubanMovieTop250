@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/all.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src='/static/jquery.goup.min.js'></script>
+	<title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+    	<p class="navbar-text">豆影250</p>
+    </div>
+          <ul class="nav navbar-nav">
+        <li><a href="/about">关于</a></li>
+        <li><a href="http://jas0n.me">博客</a></li>
+        <li class="dropdown">
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+<script type="text/javascript">
+$(document).ready(function(){
+	$.goup({
+		trigger: 100,
+		bottomOffset: 20,
+		locationOffset: 30,
+		title: 'return',
+		titleAsText: false
+	});
+});
+</script>
+
+</body>
+</html>
