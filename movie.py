@@ -5,6 +5,8 @@ import sys
 reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入   
 sys.setdefaultencoding('utf-8')
 import sqlite3
+#处理种子
+
 conn = sqlite3.connect('movie250.db')
 
 def getFileList(p):

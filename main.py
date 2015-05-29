@@ -7,10 +7,15 @@ import sqlite3
 reload(sys)
 sys.setdefaultencoding('gbk')
 
+#使用豆瓣api采集数据
+
+
 conn = sqlite3.connect('movie250.db')
 print 'connect db'
 
-url = 'https://api.douban.com/v2/movie/top250?start=100&count=100'
+url = 'https://api.douban.com/v2/movie/top250?start=200&count=100'
+#限制条目数，最大每次100条
+
 content = urllib2.urlopen(url)
 content_read = content.read()
 content_json = json.loads(content_read, 'utf-8')['subjects']
