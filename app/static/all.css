@@ -2,6 +2,8 @@ body {
 	background-image: url(https://making-photos.b0.upaiyun.com/photos/a9096d008b5e9daec0d24681a7866d7d.jpg);
 	background-repeat: none;
 	background-attachment:  fixed;
+	font-family: Karla,'Hiragino Sans GB','Microsoft YaHei',微软雅黑,STHeiti,'WenQuanYi Micro Hei',Helvetica,Arial,sans-serif
+	
 
 }
 .container {
@@ -28,6 +30,7 @@ body {
 	margin: 3em 3em;
 	border-radius: 0.5em;
 	cursor: default;
+	opacity: 0.9;
 }
 .inlineTest {
 	display: inline;
@@ -46,12 +49,12 @@ body {
 #indexProfile a {
 	text-decoration: none;
 }
+
 .name {
 	font-size: 1.5em;
 	color: #47b2e2;
 }
-#page {
-}
+
 .toDouban {
 	margin-top: 2.5em;
 }
@@ -67,4 +70,41 @@ body {
 }
 .goup-container {
 	background-color: white;
+}
+
+@media (max-width: 768px) {
+	body{
+		background-image: url(https://making-photos.b0.upaiyun.com/photos/bb57246181bc46a67df861ba6100caec.jpg);
+		background-color: black;
+		background-position: center 45px;
+		background-repeat: no-repeat;
+		background-attachment:  fixed;
+	}
+	.container {
+		width: 100%;
+	}
+	#indexImage {
+		width: 130px;
+		height: 150px;
+		border: 1px solid gray;
+	}
+	#upSay {
+	width: 100%;
+	margin: 1em auto;
+	text-align: center;
+	}
+	#indexShow {
+	text-align: left;
+	margin: 3em 1em;
+	border-radius: 0.5em;
+	cursor: default;
+	opacity: 0.9;
+	height: 150px;
+	}
+	#indexDown {
+	color: #47b2e2;
+}
+	.name{
+		font-size: 1.3em;
+	}
 }

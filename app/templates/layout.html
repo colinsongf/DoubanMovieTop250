@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/static/all.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
@@ -11,16 +12,33 @@
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
   <div class="container-fluid">
     <div class="navbar-header">
 
+      <button type="button" class="navbar-toggle" 
+        data-toggle="collapse" data-target=".navbar-collapse"> 
+        <span class="sr-only">Toggle navigation</span> 
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     	<p class="navbar-text">豆影250</p>
+
     </div>
+      <div class="navbar-collapse collapse"> 
           <ul class="nav navbar-nav">
+        <li><a href="/">主页</a></li>
         <li><a href="/about">关于</a></li>
         <li><a href="http://jas0n.me">博客</a></li>
-        <li class="dropdown">
+    {% block nav %}{% endblock %}
+
+    </ul>
+
+</div>
+
+
+
   </div>
 </nav>
 

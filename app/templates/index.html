@@ -1,5 +1,18 @@
 {% extends 'layout.html' %}
 
+{% block title %}
+豆影-主页
+{% endblock %}
+
+{% block nav %}
+          <form class="navbar-form navbar-left" role="search" method='POST' action='' id='searchForm'>
+            {{ form.csrf_token }}
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="ヽ(✿ﾟ▽ﾟ)ノ这里" name='searchNo'>
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+      </form>
+{% endblock %}
 {% block content %}
 <div class='container'>
 	<div class='row'>
@@ -12,7 +25,7 @@
 </div>
 {% endif %}
 <nav id='page'>
-  <ul class="pagination">
+  <ul class="pagination hidden-xs">
     
     <li class='0'><a href="/0">1-25</a></li>
     <li class='25'><a href="/25">26-50</a></li>
@@ -26,7 +39,20 @@
     <li class='225'><a href="/225">226-250</a></li>
 
   </ul>
+    <ul class="pagination visible-xs-inline-block">
+    
+    <li class='0'><a href="/0">1</a></li>
+    <li class='25'><a href="/25">2</a></li>
+    <li class='50'><a href="/50">3</a></li>
+    <li class='75'><a href="/75">4</a></li>
+    <li class='100'><a href="/100">5</a></li>
+    <li class='125'><a href="/125">6</a></li>
+    <li class='150'><a href="/150">7</a></li>
+    <li class='175'><a href="/175">8</a></li>
+    <li class='200'><a href="/200">9</a></li>
+    <li class='225'><a href="/225">10</a></li>
 
+  </ul>
 </nav>
 
 {% for i in entries %}
@@ -35,17 +61,23 @@
 <img src="http://ghostblogforvivian.qiniudn.com/{{i['images']}}" alt='{{i['name']}}' class='img-rounded inlineTest' id='indexImage'>
 <div id='indexProfile' class='inlineTest'>
 	<h4 class='name' id='{{i['id']}}'>{{i['name']}}</h4>
-  <span id='indexDown' class="glyphicon glyphicon-save-file" aria-hidden="true"><b><a href="http://jas0n.me/douban_top_250/[{{i['id']}}]{{i['name']}}.torrent"><b>下载种子</a></b></span>
-	<span><span class="glyphicon glyphicon-star" aria-hidden="true">排名:<b>{{i['id']}}</b></span><br><span class="glyphicon glyphicon-ok" aria-hidden="true">评分:<span class='voteCount'>{{i['rating']}}</span></span></span>
-	<span><p class='toDouban'>{% if i['submary'] != None%}{{i['submary'][:200]}}{% else %}none{% endif %}<a href="{{i['doubanurl']}}">...转到豆瓣>></a></p></span>
-
+  <span id='indexDown'><span class="glyphicon glyphicon-save-file hidden-xs" aria-hidden="true"></span><b><a href="http://jas0n.me/douban_top_250/[{{i['id']}}]{{i['name']}}.torrent"><b>下载种子</a></b></span>
+	<span><span class="glyphicon glyphicon-star hidden-xs" aria-hidden="true"></span>排名: <b>{{i['id']}}</b>
+  <br>
+  <span class="glyphicon glyphicon-ok hidden-xs" aria-hidden="true"></span>评分: <span class='voteCount'>{{i['rating']}}</span>
+</span>
+	<span class='hidden-xs'><p class='toDouban'>{% if i['submary'] != None%}{{i['submary'][:200]}}{% else %}none{% endif %}<a href="{{i['doubanurl']}}">...转到豆瓣>></a></p></span>
+  <br>
+  <span class='visible-xs-inline'>简介: <a href="{{i['doubanurl']}}">转到豆瓣</a></span>
 </div>
+
+
 </div>
 {% endfor %}
 
 </div>
 <nav id='page'>
-  <ul class="pagination">
+  <ul class="pagination hidden-xs">
     
     <li class='0'><a href="/0">1-25</a></li>
     <li class='25'><a href="/25">26-50</a></li>
@@ -57,6 +89,20 @@
     <li class='175'><a href="/175">176-200</a></li>
     <li class='200'><a href="/200">201-225</a></li>
     <li class='225'><a href="/225">226-250</a></li>
+
+  </ul>
+    <ul class="pagination visible-xs-inline-block">
+    
+    <li class='0'><a href="/0">1</a></li>
+    <li class='25'><a href="/25">2</a></li>
+    <li class='50'><a href="/50">3</a></li>
+    <li class='75'><a href="/75">4</a></li>
+    <li class='100'><a href="/100">5</a></li>
+    <li class='125'><a href="/125">6</a></li>
+    <li class='150'><a href="/150">7</a></li>
+    <li class='175'><a href="/175">8</a></li>
+    <li class='200'><a href="/200">9</a></li>
+    <li class='225'><a href="/225">10</a></li>
 
   </ul>
 
