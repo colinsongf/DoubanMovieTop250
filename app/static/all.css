@@ -4,8 +4,10 @@ body {
 	background-repeat: no-repeat;
 	background-attachment:  fixed;
 	font-family: Karla,'Hiragino Sans GB','Microsoft YaHei',微软雅黑,STHeiti,'WenQuanYi Micro Hei',Helvetica,Arial,sans-serif
-	
 
+}
+a:hover {
+	text-decoration: none;
 }
 
 @font-face {font-family: "iconfont";
